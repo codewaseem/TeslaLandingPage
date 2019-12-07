@@ -1,0 +1,24 @@
+:root,
+html {
+  min-height: 100%;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+}
+.hero {
+  height: 100vh;
+  background-color: #61627d;
+  background-image: url(../assets/tesla_car.svg),
+    linear-gradient(0deg, #61627d 0%, #48495c 100%);
+  background-size: 100%, cover;
+  background-position: center bottom, 0% 0%;
+  background-repeat: no-repeat;
+}
