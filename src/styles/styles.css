@@ -68,3 +68,9 @@ body {
   text-align: center;
   min-width: 100px;
 }
+
+.hero .toolbar .nav ul li a:hover,
+.hero .toolbar .nav ul li a:focus {
+  color: white;
+  font-weight: bold;
+}
