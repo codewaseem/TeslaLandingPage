@@ -2,7 +2,7 @@
 html {
   min-height: 100%;
   font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-  --pointer-size: 1rem;
+  --pulse-size: 1rem;
 }
 
 * {
@@ -47,7 +47,6 @@ body {
 
 .hero .toolbar .nav {
   flex: 1 1 300px;
-  max-width: 800px;
 }
 
 .hero .toolbar .nav ul {
@@ -56,6 +55,8 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   justify-content: space-evenly;
   justify-items: center;
+  max-width: 750px;
+  margin-left: auto;
 }
 
 .hero .toolbar .nav ul li a {
@@ -67,7 +68,8 @@ body {
   font-family: "Myriad Pro";
   text-transform: uppercase;
   text-align: center;
-  min-width: 100px;
+  min-width: 80px;
+  max-width: 130px;
 }
 
 .hero .toolbar .nav ul li a:hover,
@@ -78,31 +80,62 @@ body {
 
 .hero .seat-info {
   position: absolute;
-  bottom: 14rem;
-  right: 64%;
-  height: var(--pointer-size);
-  width: var(--pointer-size);
+  bottom: 13rem;
+  left: 35%;
 }
 
-.hero .seat-info::before {
+.hero .acceleration-info {
+  position: absolute;
+  bottom: 9rem;
+  left: 50%;
+}
+
+.hero .topspeed-info {
+  position: absolute;
+  bottom: 9rem;
+  left: 77.5%;
+}
+
+.pulse-effect-point {
+  cursor: pointer;
+  height: calc(var(--pulse-size) * 2);
+  width: calc(var(--pulse-size) * 2);
+  position: relative;
+}
+
+.pulse-effect-point::before {
   content: "";
   position: absolute;
-  width: calc(var(--pointer-size) / 2);
-  height: calc(var(--pointer-size) / 2);
+  width: calc(var(--pulse-size) / 2);
+  height: calc(var(--pulse-size) / 2);
   background: black;
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: zoom 2s ease infinite -0.15s;
 }
 
-.hero .seat-info::after {
+.pulse-effect-point::after {
   content: "";
   position: absolute;
-  height: 100%;
-  width: 100%;
+  height: var(--pulse-size);
+  width: var(--pulse-size);
   background: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: zoom 2s ease infinite -0.3s;
+}
+
+@keyframes zoom {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  30% {
+    transform: translate(-50%, -50%) scale(1.25);
+  }
 }
