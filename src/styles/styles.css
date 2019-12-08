@@ -10,6 +10,10 @@ html {
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   min-height: 100%;
 }
@@ -17,8 +21,34 @@ body {
   height: 100vh;
   background-color: #61627d;
   background-image: url(../assets/tesla_car.svg),
+    linear-gradient(90deg, #30313e 33%, #23242e 33% 67%, #30313e 67% 100%),
     linear-gradient(0deg, #61627d 0%, #48495c 100%);
-  background-size: 100%, cover;
-  background-position: center bottom, 0% 0%;
+  background-size: 100% 65%, 100% 35%, cover;
+  background-position: center 120%, center bottom, 0% 0%;
   background-repeat: no-repeat;
+}
+
+.hero .toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero .toolbar .logo {
+  max-width: 300px;
+  padding: 0.5rem 1.5rem;
+  min-width: 200px;
+}
+
+.hero .toolbar .nav {
+  flex: 1 0 300px;
+  max-width: 650px;
+}
+
+.hero .toolbar .nav ul {
+  list-style: none;
+}
+
+.hero .toolbar .nav ul li {
+  display: inline-block;
 }
