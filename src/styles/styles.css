@@ -95,6 +95,24 @@ body {
   bottom: 9rem;
   left: 77.5%;
 }
+.show-pulse-data {
+  display: none;
+}
+.hero .seat-info:hover .show-pulse-data,
+.hero .acceleration-info:hover .show-pulse-data,
+.hero .topspeed-info:hover .show-pulse-data {
+  right: 35px;
+  position: absolute;
+  display: block;
+  width: 300px;
+  color: white;
+  padding: 10px;
+  border: 1px solid gray;
+  top: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  transform: skewX(-20deg);
+}
 
 .pulse-effect-point {
   cursor: pointer;
@@ -108,12 +126,13 @@ body {
   position: absolute;
   width: calc(var(--pulse-size) / 2);
   height: calc(var(--pulse-size) / 2);
-  background: black;
+  background: white;
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation: zoom 2s ease infinite -0.15s;
+  z-index: 1;
 }
 
 .pulse-effect-point::after {
@@ -121,7 +140,7 @@ body {
   position: absolute;
   height: var(--pulse-size);
   width: var(--pulse-size);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(154, 38, 31, 0.4);
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -137,5 +156,17 @@ body {
 
   30% {
     transform: translate(-50%, -50%) scale(1.25);
+    box-shadow: 0px 0px 5px rgba(154, 38, 31, 0.8);
   }
+}
+
+.info-1 {
+  font-weight: 100;
+  line-height: 3rem;
+  font-size: 2rem;
+  font-family: monospace;
+}
+
+.info-2 {
+  font-size: 0.8rem;
 }
