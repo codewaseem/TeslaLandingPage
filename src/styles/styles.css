@@ -43,13 +43,16 @@ body {
 
 .hero .toolbar .logo {
   max-width: 300px;
+  max-height: 100px;
   padding: 0.5rem 1.5rem;
   min-width: 100px;
   margin: auto;
+  z-index: 1;
 }
 
 .hero .toolbar .nav {
   flex: 1 1 300px;
+  z-index: 1;
 }
 
 .hero .toolbar .nav ul {
@@ -78,6 +81,45 @@ body {
 .hero .toolbar .nav ul li a:focus {
   color: white;
   font-weight: bold;
+}
+
+.test-drive {
+  max-width: 300px;
+  position: absolute;
+  left: 5%;
+  z-index: 1;
+}
+
+.test-drive article {
+  display: grid;
+  row-gap: 20px;
+  justify-items: start;
+}
+
+.test-drive h1 {
+  color: white;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.test-drive p {
+  font-weight: 100;
+  color: #cdcdcd;
+  font-size: 0.6rem;
+}
+
+.test-drive button {
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid white;
+  outline: none;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: transform 0.2s ease 0.5ms;
+}
+
+.test-drive button:hover {
+  transform: translateY(-2px);
 }
 
 .hero .seat-info {
@@ -201,6 +243,14 @@ body {
   }
 }
 
+.tesla-shadow {
+  position: absolute;
+  width: 70%;
+  opacity: 0.2;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
 .info-1 {
   font-weight: 100;
   line-height: 3rem;
@@ -243,6 +293,7 @@ body {
   font-size: 0.7rem;
 }
 .car-design > picture > img {
+  width: 100%;
   height: 100%;
 }
 
