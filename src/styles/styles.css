@@ -115,7 +115,7 @@ body {
   width: 250px;
   color: white;
   padding: 10px;
-  border: 1px solid gray;
+  border: 1px solid rgba(154, 38, 31, 0.8);
   top: 100%;
   background: rgba(0, 0, 0, 0.9);
   border-radius: 10px;
@@ -210,6 +210,40 @@ body {
 
 .info-2 {
   font-size: 0.8rem;
+}
+
+.car-design {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.car-design > * {
+  flex: 1 1 50%;
+  height: 300px;
+  min-width: 300px;
+}
+
+.car-design > article {
+  padding: 1.2rem 2rem;
+  display: grid;
+  align-items: center;
+  background-color: #62647d;
+  color: white;
+}
+
+.car-design > article > h1 {
+  font-size: 1.5rem;
+  font-family: "Myriad Pro";
+  font-weight: bold;
+}
+
+.car-design > article > p {
+  color: #cdcdcd;
+  font-size: 0.7rem;
+}
+.car-design > picture > img {
+  height: 100%;
 }
 
 @media (min-width: 550px) {
