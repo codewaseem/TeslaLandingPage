@@ -3,6 +3,7 @@ html {
   min-height: 100%;
   font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   --pulse-size: 1rem;
+  --min-navbar-size: 1fr;
 }
 
 * {
@@ -53,7 +54,7 @@ body {
 .hero .toolbar .nav ul {
   list-style: none;
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-navbar-size), 1fr));
   justify-items: center;
   max-width: 750px;
   margin-left: auto;
@@ -69,7 +70,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   min-width: 80px;
-  max-width: 130px;
+  max-width: 150px;
 }
 
 .hero .toolbar .nav ul li a:hover,
@@ -110,7 +111,7 @@ body {
 .hero .topspeed-info:focus .show-pulse-data {
   position: relative;
   display: block;
-  width: 200px;
+  width: 250px;
   color: white;
   padding: 10px;
   border: 1px solid gray;
@@ -208,4 +209,18 @@ body {
 
 .info-2 {
   font-size: 0.8rem;
+}
+
+@media (min-width: 550px) {
+  :root,
+  html {
+    --min-navbar-size: 120px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero .topspeed-info {
+    width: 25%;
+    bottom: 8rem;
+  }
 }
