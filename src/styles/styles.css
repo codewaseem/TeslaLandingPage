@@ -297,6 +297,47 @@ body {
   height: 100%;
 }
 
+.join-us {
+  padding: 3rem;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  gap: 20px;
+}
+.join-us button {
+  padding: 0px 2rem;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #23242e;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.2s ease-in 0.5ms;
+}
+.join-us button:hover {
+  transform: translateY(-2px);
+}
+
+.join-us small {
+  color: #62647d;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  background-color: #23242e;
+  padding: 1rem;
+}
+
+footer img {
+  max-width: 200px;
+}
 @media (min-width: 550px) {
   :root,
   html {
